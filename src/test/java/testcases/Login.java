@@ -44,7 +44,24 @@ public class Login extends TestBase {
 	
 	public void TC_001(String keyword, String locator, String data){
 		
-		switch(keyword){
+	  if(keyword.equals("launchBrowser"))
+	  {
+		  launchBrowser();
+		 
+	  }
+	  if(keyword.equals("enterText"))
+	  {
+		  type(locator,data);
+		 
+	  }
+	  if(keyword.equals("clickButton"))
+	  {
+		  click(locator);
+	  }
+	  
+	
+	/*switch(keyword){
+		
 		
 		case "launchBrowser":
 			launchBrowser();
@@ -58,12 +75,12 @@ public class Login extends TestBase {
 			click(locator);
 			break;
 			
-		/*case "verifyText":
+		case "verifyText":
 			verifyText(locator, data);
-			break;*/
+			break;
 		}
 
-		//System.out.println("Login verified successfully");
+		//System.out.println("Login verified successfully");*/
 	}
 	
 

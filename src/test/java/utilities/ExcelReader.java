@@ -22,6 +22,9 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 
+
+
+
 public class ExcelReader {
 	
 	public  String path;
@@ -133,6 +136,7 @@ public class ExcelReader {
 	
 	
 	// returns the data from a cell
+	@SuppressWarnings("deprecation")
 	public String getCellData(String sheetName,int colNum,int rowNum){
 		try{
 			if(rowNum <=0)

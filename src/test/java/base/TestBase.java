@@ -3,7 +3,6 @@ package base;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.sql.SQLException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -20,7 +19,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
-
 
 import utilities.ExcelReader;
 import utilities.TestUtil;
@@ -42,7 +40,7 @@ public class TestBase {
 	public static Properties OR = new Properties();
 	public static Properties Config = new Properties();
 	public static Logger log = Logger.getLogger("devpinoyLogger");
-	public static ExcelReader excel = new ExcelReader(System.getProperty("user.dir")+"\\src\\excel\\KeywordDriven.xlsx");
+	public static ExcelReader excel = new ExcelReader(System.getProperty("user.dir")+"\\src\\test\\resources\\excel\\KeywordDriven.xlsx");
 	
 	public static FileInputStream fis;
 	public static WebDriverWait wait;
@@ -55,14 +53,14 @@ public class TestBase {
 		if(driver==null){
 			
 			try {
-				fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\properties\\Config.properties");
+				fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\properties\\Config.properties");
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			try {
 				Config.load(fis);
-				PropertyConfigurator.configure(System.getProperty("user.dir")+"\\src\\properties\\log4j.properties");
+				PropertyConfigurator.configure(System.getProperty("user.dir")+"\\src\\test\\resources\\properties\\log4j.properties");
 				log.debug("Config properties file loaded");
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
@@ -71,7 +69,7 @@ public class TestBase {
 			
 			
 			try {
-				fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\properties\\OR.properties");
+				fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\properties\\OR.properties");
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -92,13 +90,13 @@ public class TestBase {
 				
 			}else if(Config.getProperty("browser").equals("chrome")){
 				
-				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\executables\\chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\test\\resources\\executables\\chromedriver.exe");
 				driver = new ChromeDriver();
 				log.debug("Launching Chrome");
 				
 			}else if(Config.getProperty("browser").equals("ie")){
 				
-				System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"\\src\\executables\\IEDriverServer.exe");
+				System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"\\src\\test\\resources\\executables\\IEDriverServer.exe");
 				driver = new InternetExplorerDriver();
 				log.debug("Launching IE");
 				
@@ -185,7 +183,8 @@ public class TestBase {
 	@AfterSuite
 	public void tearDown(){
 		
-		driver.quit();
+		//driver.quit();
+		driver.close();
 		log.debug("Test Execution completed !!!");
 		
 	}
