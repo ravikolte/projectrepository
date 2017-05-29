@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Hybrid Driven Framework]">
+  <listeners>
+    <listener class-name="listeners.CustomListeners"/>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+  </listeners>
+  <test name="Facebook Login Test(failed)">
+    <classes>
+      <class name="testcases.One">
+        <methods>
+          <include name="TC_001"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testcases.One -->
+    </classes>
+  </test> <!-- Facebook Login Test(failed) -->
+</suite> <!-- Failed suite [Hybrid Driven Framework] -->

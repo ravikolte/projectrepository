@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Hybrid Driven Framework">
+    
+    
+    <listeners>
+        
+        <listener class-name="listeners.CustomListeners"></listener>
+        <listener class-name="org.uncommons.reportng.HTMLReporter" />
+        
+    </listeners>
+    
+    
+  <test name="Facebook Login Test">
+    <classes>
+   
+      <class name="testcases.Login"/>
+    </classes>
+  </test> <!-- Test -->
+  
+    
+</suite> <!-- Suite -->

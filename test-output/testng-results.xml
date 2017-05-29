@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Hybrid Driven Framework" duration-ms="7289" started-at="2017-05-20T19:10:09Z" finished-at="2017-05-20T19:10:16Z">
+    <groups>
+    </groups>
+    <test name="Facebook Login Test" duration-ms="7289" started-at="2017-05-20T19:10:09Z" finished-at="2017-05-20T19:10:16Z">
+      <class name="testcases.Login">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testcases.Login@74f0ea28]" name="setUp" is-config="true" duration-ms="12374" started-at="2017-05-21T00:39:56Z" finished-at="2017-05-21T00:40:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyTestcaseMode(java.lang.reflect.Method)[pri:0, instance:testcases.Login@74f0ea28]" name="verifyTestcaseMode" is-config="true" duration-ms="5" started-at="2017-05-21T00:40:09Z" finished-at="2017-05-21T00:40:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.Login.TC_001(java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTestcaseMode -->
+        <test-method status="PASS" signature="TC_001(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.Login@74f0ea28]" name="TC_001" duration-ms="5676" started-at="2017-05-21T00:40:09Z" data-provider="getData" finished-at="2017-05-21T00:40:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[launchBrowser]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[http://www.facebook.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_001 -->
+        <test-method status="PASS" signature="verifyTestcaseMode(java.lang.reflect.Method)[pri:0, instance:testcases.Login@74f0ea28]" name="verifyTestcaseMode" is-config="true" duration-ms="12" started-at="2017-05-21T00:40:15Z" finished-at="2017-05-21T00:40:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.Login.TC_001(java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTestcaseMode -->
+        <test-method status="PASS" signature="TC_001(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.Login@74f0ea28]" name="TC_001" duration-ms="1481" started-at="2017-05-21T00:40:15Z" data-provider="getData" finished-at="2017-05-21T00:40:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[enterText]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[username]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[dharmiksameer@gmail.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_001 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcases.Login@74f0ea28]" name="tearDown" is-config="true" duration-ms="2806" started-at="2017-05-21T00:40:16Z" finished-at="2017-05-21T00:40:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testcases.Login -->
+    </test> <!-- Facebook Login Test -->
+  </suite> <!-- Hybrid Driven Framework -->
+</testng-results>
